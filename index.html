@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MMMG</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Comprehensive and Reliable Evaluation Suite for Multitask Multimodal Generation">
+    <meta name="keywords" content="MMMG, Evaluation, Reliable Evaluation, Benchmark, Multi-modal Generation Benchmark, Multimodal Large Language Models, Multimodal Generation, Image Generation, Audio Generation, Interleaved Generation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> MMMG: A Comprehensive and Reliable Evaluation Suite for Multitask Multimodal Generation</title>
+
+    <link rel="icon" href="./static/images/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title is-bold">
+                <img src="static/images/icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="MMMG" style="vertical-align: middle">MMMG</span>
+              </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                A Comprehensive and Reliable Evaluation Suite for Multitask Multimodal Generation
+              </h2>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://yaojh18.github.io/" style="text-decoration: none; color: inherit;">Jihan Yao*†</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://yushi-hu.github.io/" style="text-decoration: none; color: inherit;">Yushi Hu*†</a>,
+                </span>
+                <br>
+                <span class="author-block">
+                  Yujie Yi,
+                </span>
+                <span class="author-block">
+                  <a href="https://beanham.github.io/menu/about.html" style="text-decoration: none; color: inherit;">Bin Han</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://bunsenfeng.github.io/" style="text-decoration: none; color: inherit;">Shangbin Feng</a>,
+                </span>
+                <span class="author-block">
+                  Guang Yang,
+                </span>
+                <span class="author-block">
+                  <a href="https://bbwen.github.io/" style="text-decoration: none; color: inherit;">Bingbing Wen</a>,
+                </span>
+                <br>
+                <span class="author-block">
+                  <a href="https://www.ranjaykrishna.com/index.html" style="text-decoration: none; color: inherit;">Ranjay Krishna</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.llwang.net/" style="text-decoration: none; color: inherit;">Lucy Lu Wang</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://homes.cs.washington.edu/~yuliats/" style="text-decoration: none; color: inherit;">Yulia Tsvetkov</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://nasmith.github.io/" style="text-decoration: none; color: inherit;">Noah A. Smith</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://people.eecs.berkeley.edu/~banghua/" style="text-decoration: none; color: inherit;">Banghua Zhu</a>,
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">*Core Contributors</span><br>
+                <span class="author-block">†Corresponding to:</span>
+                <span class="author-block"><a href="mailto:jihany2@cs.washington.edu">jihany2@cs.washington.edu</a>,</span>
+                <span class="author-block"><a href="mailto:yushihu@uw.edu">yushihu@uw.edu</a>,</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>&nbsp
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/UW-FMRL2/MMMG" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="font-size:18px">🤗</span>
+                      <span>MMMG</span>
+                    </a>
+                  </span>&nbsp
+                  <span class="link-block">
+                    <a href="https://github.com/yaojh18/MMMG" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>&nbsp
+                  <span class="link-block">
+                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon has-text-white">
+                        <i class="fa-solid fa-trophy"></i>
+                      </span>
+                      <span>Leaderboard</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-left">
+        <img src="static/images/overview.png" alt="MMMG Overview">
+        <p>Examples of tasks and their evaluation metrics in MMMG. For each task, we develop an evaluation metric using programs, models or their combinations. The tasks are either verifiable purely by programs or have big generation-evaluation gaps: generation is challenging for models, while automatic evaluations have high correlation with human judgments. We show evaluation pseudo-code for demonstration the evaluation process.
+        </p>
+      </div>
+    </section>
+
+<!--    <section class="section">-->
+<!--      <div class="container" style="margin-bottom: 2vh;">-->
+<!--        &lt;!&ndash; Abstract. &ndash;&gt;-->
+<!--        <div class="columns is-centered has-text-centered">-->
+<!--          <div class="column is-four-fifths">-->
+<!--            <h2 class="title is-3">🔔News</h2>-->
+<!--            <div class="content has-text-justified">-->
+<!--              <p>-->
+<!--                <b>🔥[2024-09-05] Introducing <a href="https://arxiv.org/abs/2409.02813">MMMG-Pro</a>, a robust version of MMMG benchmark for multimodal AI evaluation! 🚀</b>-->
+<!--              </p>-->
+<!--              <p>-->
+<!--                <b>🚀[2024-01-31]: We added Human Expert performance on the <a href="#leaderboard">Leaderboard</a>!🌟</b>-->
+<!--              </p>-->
+<!--              <p>-->
+<!--                <b>🔥[2023-12-04]: Our evaluation server for the test set is now available on <a href="https://eval.ai/web/challenges/challenge-page/2179/overview"><b>EvalAI</b></a>. We welcome all submissions and look forward to your participation! 😆</b>-->
+<!--              </p>-->
+<!--          </div>-->
+<!--            <h2 class="title is-3">Introduction</h2>-->
+<!--            <div class="content has-text-justified">-->
+<!--              <p>-->
+<!--                We introduce MMMG: a new benchmark designed to evaluate multimodal models on massive multi-discipline tasks demanding college-level subject knowledge and deliberate reasoning. MMMG includes <b>11.5K</b> meticulously collected multimodal questions from college exams, quizzes, and textbooks, covering six core disciplines: Art & Design, Business, Science, Health & Medicine, Humanities & Social Science, and Tech & Engineering. These questions span <b>30</b> subjects and <b>183</b> subfields, comprising 30 highly heterogeneous image types, such as charts, diagrams, maps, tables, music sheets, and chemical structures. Unlike existing benchmarks, MMMG focuses on advanced perception and reasoning with domain-specific knowledge, challenging models to perform tasks akin to those faced by experts. Our evaluation of 14 open-source LMMs and the proprietary GPT-4V(ision) highlights the substantial challenges posed by MMMG. Even the advanced GPT-4V only achieves a 56% accuracy, indicating significant room for improvement. We believe MMMG will stimulate the community to build next-generation multimodal foundation models towards expert artificial general intelligence.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;/ Abstract. &ndash;&gt;-->
+<!--    </div>-->
+<!--    </section>-->
+
+    <!-- DATASET SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 MMMG">
+          <img src="static/images/icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="MMMG">MMMG Benchmark</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview</h2>
+            <div class="content has-text-justified">
+              <p>
+                We introduce the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMG) benchmark, a novel benchmark meticulously curated to assess the expert-level multimodal understanding capability of foundation models across a broad scope of tasks. Covering subjects across disciplines, including Art, Business, Health & Medicine, Science, Humanities & Social Science, and Tech & Engineering, and over subfields. The detailed subject coverage and statistics are detailed in the figure. The questions in our benchmark were manually collected by a team of college students (including coauthors) from various disciplines and subjects, drawing from online sources, textbooks, and lecture materials.
+              </p>
+              <p>
+                 MMMG is designed to measure three essential skills in LMMs: perception, knowledge, and reasoning. Our aim is to evaluate how well these models can not only perceive and understand information across different modalities but also apply reasoning with subject-specific knowledge to derive the solution.
+              </p>
+              <p>
+                Our MMMG benchmark introduces key challenges to multimodal foundation models, as detailed in a figure. Among these, we particularly highlight the challenge stemming from the requirement for both expert-level visual perceptual abilities and deliberate reasoning with subject-specific knowledge. This challenge is vividly illustrated through our tasks, which not only demand the processing of various heterogeneous image types but also necessitate a model's adeptness in using domain-specific knowledge to deeply understand both the text and images and to reason. This goes significantly beyond basic visual perception, calling for an advanced approach that integrates advanced multimodal analysis with domain-specific knowledge.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>
+            <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/compare.png" alt="Comparison of MMMG with other benchmarks" class="center">
+              </div>
+              <p>
+                To further distinguish the difference between <i>dataset</i> and other existing ones, we elaborate the benchmark details in Figure.
+                From the <i>breadth</i> perspective, the prior benchmarks are heavily focused on daily knowledge and common sense.
+                The covered image format is also limited. Our benchmark aims to cover college-level knowledge with 30 image formats including diagrams,
+                tables, charts, chemical structures, photos, paintings, geometric shapes, music sheets, medical images, etc.
+                In the <i>depth</i> aspect, the previous benchmarks normally require commonsense knowledge or simple physical or temporal reasoning.
+                In contrast, our benchmark requires deliberate reasoning with college-level subject knowledge.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Detailed Tasks</h2>
+            <div class="content has-text-justified">
+                <div class="content has-text-centered">
+                  <img src="static/images/tasks.png" alt="Detailed task statistics" class="center">
+                </div>
+              <p> Key statistics of the MMMG benchmark</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 MMMG">Experiment Results</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+            <div class="content has-text-justified">
+              <p>
+                We evaluate various models including both closed- and open-source models. We sample 4 generations for every instruction. For evaluation, we employ the most human-aligned metric reported in the paper.
+              </p>
+            </div>
+            <br>
+            <div class="model-labels-container">
+              <span class="leaderboard-label open_source">Open-Source</span>
+              <span class="leaderboard-label proprietary">Proprietary</span>
+            </div>
+            <br>
+            <div class="content has-text-centered">
+              <p>
+                Click on Image, Image-Text, Sound and Music, Speech and Speech-Text to expand detailed results.
+              </p>
+            </div>
+            <div class="leaderboard-container">
+              <div class="table-wrapper">
+                <table id="MMMG-table">
+                  <thead>
+                    <tr>
+                      <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
+                      <th class="pro-details-cell clickable" colspan="1">MMMG-Pro</th>
+                      <th class="val-details-cell clickable" colspan="1">MMMG(Val)</th>
+                      <th class="test-details-cell clickable" colspan="1">MMMG(Test)</th>
+                    </tr>
+                    <tr>
+                      <th class="sortable clickable" data-sort="string">Name</th>
+                      <th class="clickable" data-sort="string">Size</th>
+                      <th class="sortable clickable" data-sort="date">Date</th>
+                      <th class="sortable clickable pro-overall" data-sort="number">Overall</th>
+                      <th class="hidden pro-details sortable clickable" data-sort="number">Vision</th>
+                      <th class="hidden pro-details sortable clickable" data-sort="number">Standard</th>
+                      <th class="sortable clickable val-overall" data-sort="number">Overall</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Art & Design</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Business</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Science</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Health & Medicine</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
+                      <th class="hidden val-details sortable clickable" data-sort="number">Tech & Eng.</th>
+                      <th class="sortable clickable test-overall" data-sort="number">Overall</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Art & Design</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Business</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Science</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Health & Medicine</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
+                      <th class="hidden test-details sortable clickable" data-sort="number">Tech & Eng.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Table body will be populated dynamically -->
+                  </tbody>
+                </table>
+                <p class="test-desc"> Overall results of different models on the MMMG leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- @PAN TODO: bibtex -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>
+        </code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is website adapted from <a href="https://mmmu-benchmark.github.io/">MMMU</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
