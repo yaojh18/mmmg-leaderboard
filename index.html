@@ -185,13 +185,10 @@
             <h2 class="title is-3">Overview</h2>
             <div class="content has-text-justified">
               <p>
-                We introduce the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMG) benchmark, a novel benchmark meticulously curated to assess the expert-level multimodal understanding capability of foundation models across a broad scope of tasks. Covering subjects across disciplines, including Art, Business, Health & Medicine, Science, Humanities & Social Science, and Tech & Engineering, and over subfields. The detailed subject coverage and statistics are detailed in the figure. The questions in our benchmark were manually collected by a team of college students (including coauthors) from various disciplines and subjects, drawing from online sources, textbooks, and lecture materials.
+                MMMG is a comprehensive benchmark designed to evaluate multimodal generative AI models across text, images, audio, and their interleaved combinations. The benchmark contains 49 carefully designed tasks with 937 instructions spanning four modality combinations. MMMG focuses on two types of tasks: (1) "Verifiable" tasks - these are tasks where the outputs can be objectively checked by programs. For example, checking whether a generated speech recording begins with a specific keyword. (2) Tasks with "generation-evaluation gaps" - situations where generating the correct output is challenging due to complex constraints, but verifying whether the output meets those constraints remains simple and objective. For example, generating an image of a snowman without a carrot nose can be challenging due to spurious correlation, but verifying the absence of the carrot nose can be easily achieved by prompting a VLM.
               </p>
               <p>
-                 MMMG is designed to measure three essential skills in LMMs: perception, knowledge, and reasoning. Our aim is to evaluate how well these models can not only perceive and understand information across different modalities but also apply reasoning with subject-specific knowledge to derive the solution.
-              </p>
-              <p>
-                Our MMMG benchmark introduces key challenges to multimodal foundation models, as detailed in a figure. Among these, we particularly highlight the challenge stemming from the requirement for both expert-level visual perceptual abilities and deliberate reasoning with subject-specific knowledge. This challenge is vividly illustrated through our tasks, which not only demand the processing of various heterogeneous image types but also necessitate a model's adeptness in using domain-specific knowledge to deeply understand both the text and images and to reason. This goes significantly beyond basic visual perception, calling for an advanced approach that integrates advanced multimodal analysis with domain-specific knowledge.
+                 MMMG's significance lies in its exceptional alignment with human judgment and its ability to provide fine-grained capability analysis. The benchmark achieved remarkable human agreement rates - averaging 94.3% agreement with human evaluators across different modalities, with particularly strong performance in image (94.8%) and interleaved image-text (95.6%) tasks. This represents substantial improvements over previous benchmarks. By categorizing tasks based on specific capabilities being assessed, MMMG enables researchers to identify precise weaknesses in models rather than just getting overall scores. This granular analysis capability makes MMMG a powerful tool for guiding future model development and identifying where the field needs to focus its efforts.
               </p>
             </div>
           </div>
@@ -205,12 +202,7 @@
                 <img src="static/images/compare.png" alt="Comparison of MMMG with other benchmarks" class="center">
               </div>
               <p>
-                To further distinguish the difference between <i>dataset</i> and other existing ones, we elaborate the benchmark details in Figure.
-                From the <i>breadth</i> perspective, the prior benchmarks are heavily focused on daily knowledge and common sense.
-                The covered image format is also limited. Our benchmark aims to cover college-level knowledge with 30 image formats including diagrams,
-                tables, charts, chemical structures, photos, paintings, geometric shapes, music sheets, medical images, etc.
-                In the <i>depth</i> aspect, the previous benchmarks normally require commonsense knowledge or simple physical or temporal reasoning.
-                In contrast, our benchmark requires deliberate reasoning with college-level subject knowledge.
+                Comprehensiveness of MMMG, compared with other multimodal generation benchmarks. "score" stands for embedding-based / rule-based similarity score, "code" for programmatically verification, and "reason" for multi-step reasoning. "?" represents low human alignment or no human experiments. MMMG significantly improves upon previous benchmarks in two key aspects. Comprehensively, while existing benchmarks like GenEval and DrawBench focus on single modalities, MMMG uniquely covers all four modality combinations including critical interleaved scenarios and three major tested capability, addressing the gap in evaluating real-world multimodal applications. Reliably, MMMG achieves exceptional human agreement scores exceeding 90% across all modalities by using verifiable tasks with objective, programmatic evaluation instead of subjective assessments or unvalidated MLM-as-judge approaches.
               </p>
             </div>
           </div>
@@ -222,8 +214,8 @@
             <div class="content has-text-justified">
                 <div class="content has-text-centered">
                   <img src="static/images/tasks.png" alt="Detailed task statistics" class="center">
+                  <p> Detailed statistics of the MMMG benchmark per task.</p>
                 </div>
-              <p> Key statistics of the MMMG benchmark</p>
             </div>
           </div>
         </div>
@@ -233,7 +225,7 @@
     <!-- RESULTS SECTION -->
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
-        <h1 class="title is-1 MMMG">Experiment Results</h1>
+        <h1 class="title is-1 MMMG">Leaderboard</h1>
       </div>
     </section>
 
@@ -242,10 +234,9 @@
         <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
-            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
             <div class="content has-text-justified">
               <p>
-                We evaluate various models including both closed- and open-source models. We sample 4 generations for every instruction. For evaluation, we employ the most human-aligned metric reported in the paper.
+                We evaluate various models including both closed- and open-source models. We sample 4 generations for every instruction. For evaluation, we employ the most human-aligned metric reported in the paper. If you would like to submit your model's performance onto the leaderboard,
               </p>
             </div>
             <br>
@@ -296,7 +287,7 @@
                     <!-- Table body will be populated dynamically -->
                   </tbody>
                 </table>
-                <p class="test-desc"> Overall results of different models on the MMMG leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
+                <p class="test-desc"> The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
               </div>
             </div>
           </div>
