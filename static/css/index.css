@@ -37,7 +37,10 @@ body {
 .agent {
   background-color: rgba(108, 98, 215, 0.1);
 }
-
+.active-category {
+    font-weight: bold !important;
+    background-color: #dcdcdc;
+}
 .random_frequent {
   background-color: #f4f9fe;
   color: #808080;

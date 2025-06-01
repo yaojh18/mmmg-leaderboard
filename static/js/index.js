@@ -111,7 +111,7 @@ async function loadTableData() {
 
       const safeGet = (obj, path, defaultValue = '-') => {
         if (!obj) return defaultValue;
-        return path.split('.').reduce((acc, part) => acc && acc[part], obj) || defaultValue;
+        return path.split('.').reduce((acc, part) => acc && acc[part], obj);
       };
 
       // Helper function to format the overall value
@@ -203,6 +203,8 @@ function toggleDetails(section) {
   // First, hide all sections and reset colspan
   sections.forEach(function(sec) {
     var detailCells = document.querySelectorAll('.' + sec + '-details');
+    var headerCell = document.querySelector('.' + sec + '-details-cell');
+
     detailCells.forEach(cell => {
       cell.classList.add('hidden');
       // Reset colspan for overall cells
@@ -210,11 +212,30 @@ function toggleDetails(section) {
         cell.setAttribute('colspan', '1');
       }
     });
+
+    // Remove active styling from all headers
+    headerCell.classList.remove('active-category');
   });
 
   // Show the selected section
   var detailCells = document.querySelectorAll('.' + section + '-details');
+  var activeHeaderCell = document.querySelector('.' + section + '-details-cell');
+
   detailCells.forEach(cell => cell.classList.remove('hidden'));
+
+  // Add active styling to the current header
+  activeHeaderCell.classList.add('active-category');
+
+  // Show/hide model rows based on whether they have data for the selected section
+  var allRows = document.querySelectorAll('#MMMG-table tbody tr');
+  allRows.forEach(function(row) {
+    var hasData = row.getAttribute('data-has-' + section) === 'true';
+    if (hasData) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
 
   // Show/hide model rows based on whether they have data for the selected section
   var allRows = document.querySelectorAll('#MMMG-table tbody tr');
@@ -228,26 +249,23 @@ function toggleDetails(section) {
   });
 
   // Adjust header colspans and overall cell colspans based on expanded section
-  if (section === 'i' || section === 'it') {
-    // When Image or Image-Text is expanded:
-    // Expanded category header = 2, others = 1 each (total = 5 columns)
-    sections.forEach(function(sec) {
-      var headerCell = document.querySelector('.' + sec + '-details-cell');
-      if (sec === section) {
-        headerCell.setAttribute('colspan', '2'); // Expanded header takes 2 columns
-      } else {
-        headerCell.setAttribute('colspan', '1'); // Other headers take 1 column each
+  sections.forEach(function(sec) {
+    var headerCell = document.querySelector('.' + sec + '-details-cell');
+    if (sec === section) {
+      if (section === 'i' || section === 'it'){
+        headerCell.setAttribute('colspan', '5');
       }
-    });
+      else if (section === 'a'){
+        headerCell.setAttribute('colspan', '3');
+      }
+      else {
+        headerCell.setAttribute('colspan', '4');
+      }
 
-  } else if (section === 'a' || section === 'at') {
-    // When Sound-Music or Speech-Text is expanded:
-    // All category headers = 1 each (total = 4 columns)
-    sections.forEach(function(sec) {
-      var headerCell = document.querySelector('.' + sec + '-details-cell');
-      headerCell.setAttribute('colspan', '1'); // All headers take 1 column
-    });
-  }
+    } else {
+      headerCell.setAttribute('colspan', '1'); // Other headers take 1 column each
+    }
+  });
 
   // Auto-sort by the expanded section's overall column (first column of the section)
   setTimeout(() => {
