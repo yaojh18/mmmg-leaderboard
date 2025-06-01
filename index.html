@@ -94,7 +94,7 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://arxiv.org/abs/2505.17613v1" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -225,7 +225,7 @@
     <!-- RESULTS SECTION -->
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
-        <h1 class="title is-1 MMMG">Leaderboard</h1>
+        <h1 class="title is-1 MMMG" id="leaderboard">Leaderboard</h1>
       </div>
     </section>
 
@@ -247,40 +247,40 @@
             <br>
             <div class="content has-text-centered">
               <p>
-                Click on Image, Image-Text, Sound and Music, Speech and Speech-Text to expand detailed results.
+                Click on Image, Image-Text, Sound-Music, Speech-Text to expand detailed results.
               </p>
             </div>
             <div class="leaderboard-container">
               <div class="table-wrapper">
                 <table id="MMMG-table">
                   <thead>
-                    <tr>
-                      <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
-                      <th class="pro-details-cell clickable" colspan="1">MMMG-Pro</th>
-                      <th class="val-details-cell clickable" colspan="1">MMMG(Val)</th>
-                      <th class="test-details-cell clickable" colspan="1">MMMG(Test)</th>
-                    </tr>
+                  <tr>
+                    <th colspan="3" style="text-align: center;"></th>
+                    <th class="i-details-cell clickable" colspan="1">Image</th>
+                    <th class="it-details-cell clickable" colspan="1">Image-Text</th>
+                    <th class="a-details-cell clickable" colspan="1">Sound-Music</th>
+                    <th class="at-details-cell clickable" colspan="1">Speech-Text</th>
+                  </tr>
                     <tr>
                       <th class="sortable clickable" data-sort="string">Name</th>
                       <th class="clickable" data-sort="string">Size</th>
                       <th class="sortable clickable" data-sort="date">Date</th>
-                      <th class="sortable clickable pro-overall" data-sort="number">Overall</th>
-                      <th class="hidden pro-details sortable clickable" data-sort="number">Vision</th>
-                      <th class="hidden pro-details sortable clickable" data-sort="number">Standard</th>
-                      <th class="sortable clickable val-overall" data-sort="number">Overall</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Art & Design</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Business</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Science</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Health & Medicine</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Tech & Eng.</th>
-                      <th class="sortable clickable test-overall" data-sort="number">Overall</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Art & Design</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Business</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Science</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Health & Medicine</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Tech & Eng.</th>
+                      <th class="i-details sortable clickable" data-sort="number">Overall</th>
+                      <th class="i-details sortable clickable" data-sort="number">Object</th>
+                      <th class="i-details sortable clickable" data-sort="number">Relation</th>
+                      <th class="i-details sortable clickable" data-sort="number">Format</th>
+                      <th class="i-details sortable clickable" data-sort="number">Text Rendering</th>
+                      <th class="hidden it-details sortable clickable" data-sort="number">Overall</th>
+                      <th class="hidden it-details sortable clickable" data-sort="number">Image Consistency</th>
+                      <th class="hidden it-details sortable clickable" data-sort="number">Image-Text Coherence</th>
+                      <th class="hidden it-details sortable clickable" data-sort="number">Image Editing</th>
+                      <th class="hidden it-details sortable clickable" data-sort="number">Reasoning</th>
+                      <th class="hidden a-details sortable clickable" data-sort="number">Overall</th>
+                      <th class="hidden a-details sortable clickable" data-sort="number">Sound</th>
+                      <th class="hidden a-details sortable clickable" data-sort="number">Music</th>
+                      <th class="hidden at-details sortable clickable" data-sort="number">Overall</th>
+                      <th class="hidden at-details sortable clickable" data-sort="number">Speaker Voice</th>
+                      <th class="hidden at-details sortable clickable" data-sort="number">Speech Text</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -295,12 +295,18 @@
       </div>
     </section>
 
-    <!-- @PAN TODO: bibtex -->
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title is-3 has-text-centered">BibTeX</h2>
-        <pre><code>
-        </code></pre>
+        <pre><code>@misc{yao2025mmmgcomprehensivereliableevaluation,
+              title={MMMG: a Comprehensive and Reliable Evaluation Suite for Multitask Multimodal Generation},
+              author={Jihan Yao and Yushi Hu and Yujie Yi and Bin Han and Shangbin Feng and Guang Yang and Bingbing Wen and Ranjay Krishna and Lucy Lu Wang and Yulia Tsvetkov and Noah A. Smith and Banghua Zhu},
+              year={2025},
+              eprint={2505.17613},
+              archivePrefix={arXiv},
+              primaryClass={cs.AI},
+              url={https://arxiv.org/abs/2505.17613},
+        }</code></pre>
       </div>
     </section>
 
