@@ -1,0 +1,8 @@
+{
+  "name": "AudioGen Medium",
+  "date": "2023-08-10",
+  "type": "open_source",
+  "size": "1.5B",
+  "link": "https://github.com/facebookresearch/audiocraft/blob/main/docs/AUDIOGEN.md",
+  "source": "official"
+}

@@ -34,6 +34,10 @@ body {
   background-color: rgba(117, 209, 215, 0.1);
 }
 
+.agent {
+  background-color: rgba(108, 98, 215, 0.1);
+}
+
 .random_frequent {
   background-color: #f4f9fe;
   color: #808080;

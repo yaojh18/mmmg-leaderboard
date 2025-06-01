@@ -1,6 +1,7 @@
 {
-  "name": "GPT Image",
+  "name": "GPT Image 1",
   "date": "2025-03-25",
   "type": "proprietary",
-  "link": "https://platform.openai.com/docs/models/gpt-image-1"
+  "link": "https://platform.openai.com/docs/models/gpt-image-1",
+  "source": "official"
 }

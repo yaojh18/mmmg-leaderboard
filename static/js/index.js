@@ -61,6 +61,7 @@ async function loadModelData() {
   } catch (e) {
     console.error('Failed to load model data:', e);
   }
+
   return modelData;
 }
 
@@ -72,7 +73,6 @@ async function getModelDirectories() {
     const response = await fetch('./data/model_list.json');
     if (response.ok) {
       const modelList = await response.json();
-      console.log(modelList);
       return modelList || [];
     }
   } catch (e) {
@@ -115,30 +115,38 @@ async function loadTableData() {
       };
 
       // Helper function to format the overall value
-      const formatValue = (value) => {
-        return value !== null && value !== undefined ? value.toFixed(3) : '-';
+      const formatValue = (value, shouldAddAsterisk = false) => {
+        if (value !== '-' && value !== null && value !== undefined) {
+          const formattedValue = value.toFixed(3);
+          return shouldAddAsterisk ? formattedValue + '*' : formattedValue;
+        }
+        return '-';
       };
+
+      // Check if this model's results are provided by authors
+      const isAuthorProvided = !row.info.source || row.info.source === 'author';
 
       tr.innerHTML = `
         <td>${nameCell}</td>
         <td>${row.info.size || '-'}</td>
         <td>${row.info.date || '-'}</td>
-        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.overall')), iScores.overall[index]) : '-'}</td>
-        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.object')), iScores.object[index]) : '-'}</td>
-        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.relation')), iScores.relation[index]) : '-'}</td>
-        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.format')), iScores.format[index]) : '-'}</td>
-        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.text rendering')), iScores.textRendering[index]) : '-'}</td>
-        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.overall')), itScores.overall[index]) : '-'}</td>
-        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.consistency')), itScores.consistency[index]) : '-'}</td>
-        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.coherence')), itScores.coherence[index]) : '-'}</td>
-        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.editing')), itScores.editing[index]) : '-'}</td>
-        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.reasoning')), itScores.reasoning[index]) : '-'}</td>
-        <td class="hidden a-details">${row.a ? applyStyle(formatValue(safeGet(row, 'a.overall')), aScores.overall[index]) : '-'}</td>
-        <td class="hidden a-details">${row.a ? applyStyle(formatValue(safeGet(row, 'a.sound')), aScores.sound[index]) : '-'}</td>
-        <td class="hidden a-details">${row.a ? applyStyle(formatValue(safeGet(row, 'a.music')), aScores.music[index]) : '-'}</td>
-        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.overall')), atScores.overall[index]) : '-'}</td>
-        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.speaker voice')), atScores.speakerVoice[index]) : '-'}</td>
-        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.speech text')), atScores.speechText[index]) : '-'}</td>
+        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.overall'), isAuthorProvided), iScores.overall[index]) : '-'}</td>
+        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.object'), isAuthorProvided), iScores.object[index]) : '-'}</td>
+        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.relation'), isAuthorProvided), iScores.relation[index]) : '-'}</td>
+        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.format'), isAuthorProvided), iScores.format[index]) : '-'}</td>
+        <td class="hidden i-details">${row.i ? applyStyle(formatValue(safeGet(row, 'i.text rendering'), isAuthorProvided), iScores.textRendering[index]) : '-'}</td>
+        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.overall'), isAuthorProvided), itScores.overall[index]) : '-'}</td>
+        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.consistency'), isAuthorProvided), itScores.consistency[index]) : '-'}</td>
+        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.coherence'), isAuthorProvided), itScores.coherence[index]) : '-'}</td>
+        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.editing'), isAuthorProvided), itScores.editing[index]) : '-'}</td>
+        <td class="hidden it-details">${row.it ? applyStyle(formatValue(safeGet(row, 'it.reasoning'), isAuthorProvided), itScores.reasoning[index]) : '-'}</td>
+        <td class="hidden a-details">${row.a ? applyStyle(formatValue(safeGet(row, 'a.overall'), isAuthorProvided), aScores.overall[index]) : '-'}</td>
+        <td class="hidden a-details">${row.a ? applyStyle(formatValue(safeGet(row, 'a.sound'), isAuthorProvided), aScores.sound[index]) : '-'}</td>
+        <td class="hidden a-details">${row.a ? applyStyle(formatValue(safeGet(row, 'a.music'), isAuthorProvided), aScores.music[index]) : '-'}</td>
+        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.overall'), isAuthorProvided), atScores.overall[index]) : '-'}</td>
+        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.voice'), isAuthorProvided), atScores.voice[index]) : '-'}</td>
+        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.transcript'), isAuthorProvided), atScores.transcript[index]) : '-'}</td>
+        <td class="hidden at-details">${row.at ? applyStyle(formatValue(safeGet(row, 'at.coherence'), isAuthorProvided), atScores.coherence[index]) : '-'}</td>
       `;
       tbody.appendChild(tr);
     });
@@ -361,7 +369,7 @@ function prepareScoresForStyling(data, section) {
     'i': ['overall', 'object', 'relation', 'format', 'textRendering'],
     'it': ['overall', 'consistency', 'coherence', 'editing', 'reasoning'],
     'a': ['overall', 'sound', 'music'],
-    'at': ['overall', 'speakerVoice', 'speechText']
+    'at': ['overall', 'voice', 'transcript', 'coherence']
   };
 
   const sectionFields = fields[section] || [];
@@ -375,12 +383,6 @@ function prepareScoresForStyling(data, section) {
         switch(field) {
           case 'textRendering':
             fieldKey = 'text rendering';
-            break;
-          case 'speakerVoice':
-            fieldKey = 'speaker voice';
-            break;
-          case 'speechText':
-            fieldKey = 'speech text';
             break;
           // For other fields, use the field name as is
         }
@@ -398,12 +400,6 @@ function prepareScoresForStyling(data, section) {
         switch(field) {
           case 'textRendering':
             fieldKey = 'text rendering';
-            break;
-          case 'speakerVoice':
-            fieldKey = 'speaker voice';
-            break;
-          case 'speechText':
-            fieldKey = 'speech text';
             break;
         }
         const value = row[section][fieldKey];

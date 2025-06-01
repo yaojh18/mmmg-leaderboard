@@ -1,0 +1,8 @@
+{
+  "name": "MusicGen Large",
+  "date": "2023-06-08",
+  "type": "open_source",
+  "size": "3.3B",
+  "link": "https://huggingface.co/facebook/musicgen-large",
+  "source": "official"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Gemini 2.5 Pro (03-25) + VoxInstruct",
+  "type": "agent",
+  "link": "https://github.com/thuhcsi/VoxInstruct",
+  "source": "official"
+}

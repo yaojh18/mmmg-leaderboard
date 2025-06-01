@@ -1,0 +1,6 @@
+{
+  "name": "Gemini 2.5 Pro (03-25) + VoiceLDM",
+  "type": "agent",
+  "link": "https://github.com/glory20h/VoiceLDM",
+  "source": "official"
+}
