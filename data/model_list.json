@@ -10,7 +10,6 @@
   "Seed Llama",
   "Anole",
   "Gemini Image",
-  "Gemini Agent",
   "GPT Agent",
   "Hybrid Agent",
   "Stable Audio",
@@ -23,5 +22,8 @@
   "YuE",
   "VoxInstruct Agent",
   "VoiceLDM Agent",
-  "Spirit LM"
+  "Spirit LM",
+  "Janus",
+  "GPT",
+  "Bagel"
 ]
