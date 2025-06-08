@@ -5,6 +5,5 @@
    + "type": can take "open_source", "proprietary" or "agent"
    + "date": your model's release date, optional
    + "size": your model's size, optional
-   + "link": your model's link, optional
-3. Remember to register for your new folder in `./data/model_list.json`, the registered name is your folder's name. This is necessary because browsers don't allow scanning over the path.
-4. Create a pull request, and we will validate your uploaded data.
+   + "link": your model's link, optional 
+3. Create a pull request, and we will validate your uploaded data.

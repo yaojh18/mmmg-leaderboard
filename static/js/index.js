@@ -18,45 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function loadModelData() {
-  const modelData = [];
-
+  let modelData = []
   try {
-    // Get list of model directories (you might need to implement this based on your setup)
-    // For now, I'll simulate reading from known model directories
-    const modelDirs = await getModelDirectories();
-
-    for (const modelDir of modelDirs) {
-      try {
-        // Load metadata
-        const metadataResponse = await fetch(`./data/${modelDir}/metadata.json`);
-        if (!metadataResponse.ok) continue;
-        const metadata = await metadataResponse.json();
-
-        const modelEntry = {
-          info: metadata,
-          i: null,
-          it: null,
-          a: null,
-          at: null
-        };
-
-        // Try to load each category data
-        const categories = ['i', 'it', 'a', 'at'];
-        for (const category of categories) {
-          try {
-            const response = await fetch(`./data/${modelDir}/${category}_agg_eval.json`);
-            if (response.ok) {
-              modelEntry[category] = await response.json();
-            }
-          } catch (e) {
-            // File doesn't exist, keep as null
-          }
-        }
-
-        modelData.push(modelEntry);
-      } catch (e) {
-        console.warn(`Failed to load data for model ${modelDir}:`, e);
-      }
+    const response = await fetch(`./data/data.json`);
+    if (response.ok) {
+      modelData = await response.json();
+      console.log(modelData)
     }
   } catch (e) {
     console.error('Failed to load model data:', e);

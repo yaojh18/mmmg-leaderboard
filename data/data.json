@@ -1,0 +1,556 @@
+[
+    {
+        "info": {
+            "name": "Anole",
+            "date": "2024-07-08",
+            "type": "open_source",
+            "size": "7B",
+            "link": "https://github.com/GAIR-NLP/anole",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.1475,
+            "relation": 0.07187500000000001,
+            "format": 0.22632135329541175,
+            "text rendering": 0.011458333333333334,
+            "overall": 0.10800126475648739
+        },
+        "it": {
+            "consistency": 0.0,
+            "coherence": 0.019642857142857146,
+            "editing": 0.0989904515135998,
+            "reasoning": 0.0,
+            "overall": 0.03657213545407994
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "AudioGen Medium",
+            "date": "2023-08-10",
+            "type": "open_source",
+            "size": "1.5B",
+            "link": "https://github.com/facebookresearch/audiocraft/blob/main/docs/AUDIOGEN.md",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": 0.24635416666666668,
+            "music": null,
+            "overall": 0.12317708333333334
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "AudioLDM 2 Large",
+            "date": "2023-08-27",
+            "type": "open_source",
+            "size": "1.5B",
+            "link": "https://huggingface.co/cvssp/audioldm2-large",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": 0.22378472222222223,
+            "music": 0.2589285714285714,
+            "overall": 0.24135664682539684
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Bagel (think)",
+            "date": "2025-05-20",
+            "type": "open_source",
+            "size": "7B",
+            "link": "https://github.com/bytedance-seed/BAGEL",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.5700000000000001,
+            "relation": 0.503125,
+            "format": 0.6738822890893296,
+            "text rendering": 0.05451388888888888,
+            "overall": 0.45527187463180907
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "BLIP3o",
+            "date": "2025-05-14",
+            "type": "open_source",
+            "size": "8B",
+            "link": "https://huggingface.co/BLIP3o/BLIP3o-Model-8B",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.28250000000000003,
+            "relation": 0.375,
+            "format": 0.5346201884327271,
+            "text rendering": 0.04981481481481482,
+            "overall": 0.2950846300935642
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Dalle 3",
+            "date": "2023-08-20",
+            "type": "proprietary",
+            "link": "http://platform.openai.com/docs/models/dall-e-3",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.43500000000000005,
+            "relation": 0.384375,
+            "format": 0.27888069074825594,
+            "text rendering": 0.3320485301735302,
+            "overall": 0.37617192657265025
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Flux 1.0 Pro",
+            "date": "2024-10-02",
+            "type": "proprietary",
+            "link": "https://replicate.com/black-forest-labs/flux-1.1-pro",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.475,
+            "relation": 0.496875,
+            "format": 0.3957825096825377,
+            "text rendering": 0.5850496956746957,
+            "overall": 0.49351529331351157
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Gemini 2.5 Pro (03-25) + Imagen 3",
+            "type": "agent",
+            "source": "official"
+        },
+        "i": null,
+        "it": {
+            "consistency": 0.3773304171705584,
+            "coherence": 0.5180342970521543,
+            "editing": 0.3232994101323593,
+            "reasoning": 0.07908785790205003,
+            "overall": 0.3805432170908064
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Gemini 2.0 Flash Image Generation",
+            "date": "2025-04-17",
+            "type": "proprietary",
+            "link": "https://ai.google.dev/gemini-api/docs/image-generation",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.5875,
+            "relation": 0.5874999999999999,
+            "format": 0.5663067170870434,
+            "text rendering": 0.8527431364931365,
+            "overall": 0.6413102031181069
+        },
+        "it": {
+            "consistency": 0.10403444572634143,
+            "coherence": 0.235921910430839,
+            "editing": 0.5462115814703976,
+            "reasoning": 0.06775631755590439,
+            "overall": 0.27922038627908874
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "GPT 4.1 Image Generation",
+            "date": "2025-05-20",
+            "type": "proprietary",
+            "link": "https://platform.openai.com/docs/guides/images-vision?api-mode=responses",
+            "source": "official"
+        },
+        "i": null,
+        "it": {
+            "consistency": 0.3921578614154657,
+            "coherence": 0.6534807256235827,
+            "editing": 0.509544530445713,
+            "reasoning": 0.10075490474700928,
+            "overall": 0.4896965689305352
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "GPT-4o (2024-08-06) + GPT Image 1",
+            "type": "agent",
+            "source": "official"
+        },
+        "i": null,
+        "it": {
+            "consistency": 0.46129343610250284,
+            "coherence": 0.4766666666666667,
+            "editing": 0.43057664272608526,
+            "reasoning": 0.04814200699329377,
+            "overall": 0.416143885876114
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "GPT Image 1",
+            "date": "2025-03-25",
+            "type": "proprietary",
+            "link": "https://platform.openai.com/docs/models/gpt-image-1",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.785,
+            "relation": 0.76875,
+            "format": 0.7065608447171615,
+            "text rendering": 0.8489552577052577,
+            "overall": 0.7828562473250068
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Gemini 2.5 Pro (03-25) + GPT Image 1",
+            "type": "agent",
+            "source": "official"
+        },
+        "i": null,
+        "it": {
+            "consistency": 0.6112633868890603,
+            "coherence": 0.7904811507936508,
+            "editing": 0.5265228560841099,
+            "reasoning": 0.13083202503621577,
+            "overall": 0.6005243088288974
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Ideogram 2",
+            "date": "2024-08-24",
+            "type": "proprietary",
+            "link": "https://replicate.com/ideogram-ai/ideogram-v2",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.5625,
+            "relation": 0.540625,
+            "format": 0.3244199099906634,
+            "text rendering": 0.7262483812483812,
+            "overall": 0.5573274974090336
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Imagen 3",
+            "date": "2024-12-21",
+            "type": "proprietary",
+            "link": "https://ai.google.dev/gemini-api/docs/image-generation",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.51,
+            "relation": 0.584375,
+            "format": 0.381633917343378,
+            "text rendering": 0.49696662134162134,
+            "overall": 0.5101191213365444
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Janus Pro",
+            "date": "2025-01-29",
+            "type": "open_source",
+            "link": "https://github.com/deepseek-ai/Janus",
+            "source": "official",
+            "size": "7B"
+        },
+        "i": {
+            "object": 0.3175,
+            "relation": 0.41875,
+            "format": 0.38906742312341625,
+            "text rendering": 0.2704945286195286,
+            "overall": 0.34657988800752987
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Luma Photon",
+            "date": "2024-12-02",
+            "type": "proprietary",
+            "link": "https://replicate.com/luma/photon",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.625,
+            "relation": 0.675,
+            "format": 0.5775935130432357,
+            "text rendering": 0.687183695933696,
+            "overall": 0.6458384367062543
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Make-An-Audio 2",
+            "date": "2023-05-29",
+            "type": "open_source",
+            "link": "https://github.com/bytedance/Make-An-Audio-2",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": 0.48715277777777777,
+            "music": null,
+            "overall": 0.24357638888888888
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "MusicGen Large",
+            "date": "2023-06-08",
+            "type": "open_source",
+            "size": "3.3B",
+            "link": "https://huggingface.co/facebook/musicgen-large",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": null,
+            "music": 0.4193452380952381,
+            "overall": 0.20967261904761905
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Recraft V3",
+            "date": "2024-10-30",
+            "type": "proprietary",
+            "link": "https://replicate.com/recraft-ai/recraft-v3",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.5075000000000001,
+            "relation": 0.459375,
+            "format": 0.29429026149464577,
+            "text rendering": 0.628917378917379,
+            "overall": 0.48930947569581634
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Seed Llama",
+            "date": "2023-10-02",
+            "type": "open_source",
+            "size": "14B",
+            "link": "https://github.com/AILab-CVC/SEED",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.24250000000000002,
+            "relation": 0.046875,
+            "format": 0.24230751223740224,
+            "text rendering": 0.0004629629629629632,
+            "overall": 0.1347145652402638
+        },
+        "it": {
+            "consistency": 0.0,
+            "coherence": 0.02142857142857143,
+            "editing": 0.16799400935111472,
+            "reasoning": 0.0,
+            "overall": 0.057898202805334406
+        },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Spirit LM",
+            "date": "2024-08-02",
+            "type": "open_source",
+            "size": "7B",
+            "link": "https://github.com/facebookresearch/spiritlm",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": null,
+        "at": {
+            "voice": 0.0005741095278685115,
+            "transcript": 0.1,
+            "coherence": 0.0,
+            "overall": 0.028817475511943653
+        }
+    },
+    {
+        "info": {
+            "name": "Stable Audio Open 1.0",
+            "date": "2023-09-01",
+            "type": "open_source",
+            "size": "1.2B",
+            "link": "http://huggingface.co/stabilityai/stable-audio-open-1.0",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": 0.32534722222222223,
+            "music": 0.38988095238095233,
+            "overall": 0.3576140873015873
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Stable Diffusion 3.5 Large",
+            "date": "2024-10-29",
+            "type": "open_source",
+            "size": "8B",
+            "link": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.24500000000000002,
+            "relation": 0.353125,
+            "format": 0.29358117005911966,
+            "text rendering": 0.48900301087801096,
+            "overall": 0.33511938376801936
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Tango 2 Full",
+            "date": "2024-07-18",
+            "type": "open_source",
+            "link": "https://huggingface.co/declare-lab/tango2-full",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": 0.30954861111111115,
+            "music": null,
+            "overall": 0.15477430555555557
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Tango Music",
+            "date": "2024-07-18",
+            "type": "open_source",
+            "link": "https://huggingface.co/declare-lab/tango-music-af-ft-mc",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": null,
+            "music": 0.29464285714285715,
+            "overall": 0.14732142857142858
+        },
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Gemini 2.5 Pro (03-25) + VoiceLDM",
+            "type": "agent",
+            "link": "https://github.com/glory20h/VoiceLDM",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": null,
+        "at": {
+            "voice": 0.22693072418679558,
+            "transcript": 0.39375,
+            "coherence": 0.55,
+            "overall": 0.366898881794341
+        }
+    },
+    {
+        "info": {
+            "name": "Gemini 2.5 Pro (03-25) + VoxInstruct",
+            "type": "agent",
+            "link": "https://github.com/thuhcsi/VoxInstruct",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": null,
+        "at": {
+            "voice": 0.6545252337855799,
+            "transcript": 0.41874999999999996,
+            "coherence": 0.76875,
+            "overall": 0.6197965287652486
+        }
+    },
+    {
+        "info": {
+            "name": "YuE",
+            "date": "2025-03-11",
+            "type": "open_source",
+            "size": "6.2B",
+            "link": "https://github.com/multimodal-art-projection/YuE",
+            "source": "official"
+        },
+        "i": null,
+        "it": null,
+        "a": {
+            "sound": null,
+            "music": 0.24702380952380953,
+            "overall": 0.12351190476190477
+        },
+        "at": null
+    }
+]
