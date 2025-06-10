@@ -66,7 +66,7 @@
             "name": "Bagel (think)",
             "date": "2025-05-20",
             "type": "open_source",
-            "size": "7B",
+            "size": "14B",
             "link": "https://github.com/bytedance-seed/BAGEL",
             "source": "official"
         },
@@ -349,6 +349,26 @@
     },
     {
         "info": {
+            "name": "MMaDA",
+            "date": "2025-03-21",
+            "type": "open_source",
+            "size": "8B",
+            "link": "https://github.com/Gen-Verse/MMaDA",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.35,
+            "relation": 0.221875,
+            "format": 0.5141099667112152,
+            "text rendering": 0.0,
+            "overall": 0.2618371381016022
+        },
+        "it": null,
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
             "name": "MusicGen Large",
             "date": "2023-06-08",
             "type": "open_source",
@@ -407,6 +427,26 @@
             "reasoning": 0.0,
             "overall": 0.057898202805334406
         },
+        "a": null,
+        "at": null
+    },
+    {
+        "info": {
+            "name": "Show-o",
+            "date": "2024-08-22",
+            "type": "open_source",
+            "size": "7B",
+            "link": "https://github.com/showlab/Show-o",
+            "source": "official"
+        },
+        "i": {
+            "object": 0.37499999999999994,
+            "relation": 0.39687500000000003,
+            "format": 0.4885031757517272,
+            "text rendering": 0.0,
+            "overall": 0.317107596535961
+        },
+        "it": null,
         "a": null,
         "at": null
     },
